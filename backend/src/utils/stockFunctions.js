@@ -1,4 +1,5 @@
 //Made 10/12/20
+const axios = require('axios');
 
 const urlPrefix = "https://finnhub.io/api/v1";
 
@@ -11,7 +12,29 @@ const urlPrefix = "https://finnhub.io/api/v1";
  *      'o', 'h', 'l', 'c', 'pc', and 't', respectively. If symbol is invalid or there is an issue,
  *      Undefined will be returned instead. */
 function getStockQuote(sym) {
+	// MAke call
 	
+	// validate the input?
+	
+	const apiCallUrl = urlPrefix + '/quote'
+	axios({
+		"method":"GET",
+		"url": apiCallUrl,
+		"params": {
+			symbol: sym,
+			token: process.env.FINNHUB_KEY
+		}
+	})
+	.then(res => {
+		console.log(res.data);
+		return res.data;
+	})
+	.catch(err => { 
+		console.log(err);
+		return undefined;
+	});
+	// .then
+	// .catch // stupid!
 	
 }
 
