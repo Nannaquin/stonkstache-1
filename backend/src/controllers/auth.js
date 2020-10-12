@@ -1,3 +1,5 @@
+// Made 10/11/20
+// The controller for Authentication of Users
 const router = require('express').Router();
 //const User = require('../models/User');
 //const validateSignupInput = require("../validation/signup");

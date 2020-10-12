@@ -1,3 +1,5 @@
+// Made 10/11/20
+// A route controller for testing api calls working, period.
 const router = require('express').Router();
 
 router.get('/routetest', (req, res) => {
