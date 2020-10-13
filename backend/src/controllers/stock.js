@@ -2,6 +2,14 @@
 // Controller relating to stock data (unsure yet if local info or finnhub data calls)
 const router = require('express').Router();
 
+// api/stocks/getUserStocks  POST
+/** Used to get a User's currently owned stocks.
+ *@pre  A valid User has arrived at the Dashboard Page.
+ *@post  An array of the User's owned stocks will be returned.
+ *@param  user_id  The DB id of the given user (NOT FINAL)    
+ *@return  An array of owned stocks is returned if User exists AND
+ *		they own stock. Otherwise, return undefined.
+*/
 router.post('/getUserStocks', (req, res) => {
 	
 	

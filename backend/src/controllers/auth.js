@@ -6,7 +6,7 @@ const router = require('express').Router();
 //const passport = require('../middlewares/authentication');
 
 
-
+// A Fake signup route
 router.post('/signup-v0', (req, res) => {
 
   try {
@@ -67,9 +67,12 @@ router.post('/login',
 	res.status(200).json({msg:"Login Successful"});
   }); */
 
+// A Fake login route
  router.post('login-v0', (req, res) => {
 	 res.status(200).json({msg:"Fake Login Successful"});
  });
+ 
+// A Fake logout route
 router.post('/logout-v0', (req, res) => {
   //req.logout();
   res.status(200).json({ message: "Fake Logout Successful" });
